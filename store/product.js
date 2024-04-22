@@ -16,6 +16,13 @@ class Product {
     this.onsale = onsale;
     this._supplier = supplier;
   }
+  sellUnits(units) {
+    if (this.stock >= units) {
+      this.stock -= units;
+    } else {
+      console.error("no hay suficiente stock pepito");
+    }
+  }
   get getSupplier() {
     return this._supplier;
   }
@@ -27,3 +34,11 @@ const product1 = new Product("id123", "galaxy s4", 100, 20, true, "Samsung");
 console.log(product1.getSupplier);
 product1.setSupplier = "Xiaomi";
 console.log(product1.getSupplier);
+const product2 = new Product("id456", "pito 11", 200);
+const product3 = new Product("id789", "iphone 12", 300, 10, false, "xiaomi");
+console.log(product2, product3);
+console.log(product2.title, product3.onsale);
+const product4 = new Product("ID069", "Poco F5", 1500, 12, true, "Xiaomi");
+product4.sellUnits(10);
+product4.sellUnits(5);
+console.log(product4);
