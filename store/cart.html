@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/layout.css" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
     <title>Tienda Virtual</title>
   </head>
   <body>
@@ -24,14 +24,6 @@
             alt="Logo store"
           />
         </a>
-        <form class="header-form">
-          <input
-            class="header-input"
-            type="text"
-            placeholder="Search"
-            id="search"
-          />
-        </form>
         <ul class="header-social">
           <li id="facebook" class="header-li">
             <a class="header-a" href="https://facebook.com">
@@ -59,126 +51,31 @@
           </li>
         </ul>
       </div>
-      <nav id="navbar"></nav>
+      <nav id="navbar">
+        <li class="nav-li">
+          <a class="nav-a" href="#">Ofertas</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-a" href="#">Cómo comprar</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-a" href="#">Costos y tarifas</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-a" href="#">Mis pedidos</a>
+        </li>
+        <li class="nav-li">
+          <a class="nav-a" href="#">Garantía</a>
+        </li>
+      </nav>
     </header>
     <section class="hero-section">
       <article class="hero-title">
-        <span class="hero-span">tecnología</span>
-        <span class="hero-span">renovada</span>
+        <span class="hero-span">mi</span>
+        <span class="hero-span">carrito</span>
       </article>
     </section>
-    <main>
-      <div class="product-container" id="products">
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-        <a class="product-card" href="./details.html">
-          <img
-            class="product-img"
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div class="product-info">
-            <span class="product-title">iPad Pro 12.9</span>
-            <span class="product-description">Silver</span>
-            <div class="product-price-block">
-              <span class="product-price">900000</span>
-              <span class="product-discount">50% Off</span>
-            </div>
-            <div class="product-tax-policy">
-              Incluye impuesto País y percepción AFIP
-            </div>
-          </div>
-        </a>
-      </div>
-    </main>
+    <main></main>
     <footer>
       <div id="footer" class="footer-container">
         <ul class="footer-ul">
@@ -239,6 +136,5 @@
       </div>
       <div class="footer-copyright">Curso de HTML + CSS 2023</div>
     </footer>
-    <script src="scripts/layout.js"></script>
   </body>
 </html>
