@@ -118,7 +118,7 @@ const producto7 = new Product(
 const products = [producto1, producto2, producto3, producto4, producto5];
 
 function createCard(product) {
-  return `<a class="product-card" href="./details.html">
+  return `<a class="product-card" href="./details.html?id=${product.id}">
   <img
     src="${product.images[0]}"
     alt="${product.title}"
