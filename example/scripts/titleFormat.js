@@ -1,10 +1,9 @@
-function titleFormat(params) {
-  const FirstLetter = params.charAt(0).toUpperCase();
-  const RestPhrase = params.slice("").toLowerCase();
+function titleFormat(phrase) {
+  const FirstLetter = phrase.charAt(0).toUpperCase();
+  const RestPhrase = phrase.slice(1, phrase.length - 1).toLowerCase();
   const FinalPhrase = FirstLetter + RestPhrase;
-  return FinalPhrase.length;
-  console.log(FinalPhrase);
+  return FinalPhrase;
 }
-titleFormat("hOla MunDo");
-titleFormat("hOlA MuNDO");
-titleFormat("HOla munDo");
+console.log(titleFormat("hello world"), titleFormat("hello world").length);
+console.log(titleFormat("HELLO world"));
+console.log(titleFormat("HellO WOrLd"));

@@ -1,8 +1,8 @@
-function lengthOf(params) {
-  const length = params.length;
+function lengthOf(frase) {
+  const length = frase.length;
   if (length > 0) {
     alert(
-      `La cantidad de caracteres de la frase o palabra ${params} es: ${length}`
+      `La cantidad de caracteres de la frase o palabra ${frase} es: ${length}`
     );
     return length;
   } else {

@@ -1,26 +1,10 @@
-const $productList = document.getElementById("productList");
-const $inputSearch = document.getElementById("inputSearch");
-
-const handleSearchProduct = (event, productsList) => {
-  const valueInputSearch = event.target.value;
-  const filterProducts = productsList.filter((product) => {
-    return product.name.toLowerCase().includes(valueInputSearch.toLowerCase());
-  });
-  return filterProducts;
+let searchSelector = document.querySelector("#search");
+const captureText = (event) => {
+  let text = event.target.value;
+  let filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(text.toLowerCase())
+  );
+  printCards(filteredProducts, "products");
 };
 
-const loadProducts = (productsList) => {
-  for (const product of productsList) {
-    $productList.innerHTML += cardProductTemplate(product);
-  }
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  loadProducts(products);
-});
-
-$inputSearch.addEventListener("keyup", (event) => {
-  $productList.innerHTML = "";
-  const filteredProductList = handleSearchProduct(event, products);
-  loadProducts(filteredProductList);
-});
+searchSelector.addEventListener("keyup", (event) => captureText(event));

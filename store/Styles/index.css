@@ -14,7 +14,10 @@
   width: 250px;
   margin: 15px;
   text-decoration: none;
-
+}
+.product-card a {
+  text-decoration: none;
+  color: inherit;
 }
 .product-img {
   width: 100%;
