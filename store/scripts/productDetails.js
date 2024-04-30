@@ -75,8 +75,10 @@ function printDetails(id) {
             </ul>
             <div class="checkout-process">
               <div class="top">
-                <input type="number" min="1" value="1" onclick="changePrice(event)" />
-                <button type="button" class="cart-btn">
+                <input id="quantity" type="number" min="1" value="1" onchange="changePrice(event)" />
+                <button type="button" class="cart-btn" onclick="saveProduct(${
+                  product.id
+                })">
                   Añadir al Carrito
                 </button>
               </div>
@@ -101,3 +103,26 @@ function changePrice(event) {
   priceSelector.innerHTML = `$${quantity * product.price}`;
 }
 printDetails(idQuery);
+
+function saveProduct(id) {
+  const found = products.find((each) => each.id == id);
+  const product = {
+    id: id,
+    title: found.title,
+    price: document.getElementById("price").innerHTML,
+    photos: document.querySelector("#big-img").src,
+    color: document.querySelector("#color").value,
+    quantity: document.querySelector("#quantity").value,
+  };
+
+  if (localStorage.getItem("cart") == null) {
+    let array = [];
+    array.push(product);
+    localStorage.setItem("cart", JSON.stringify(array));
+  } else {
+    let arrayAnterior = JSON.parse(localStorage.getItem("cart"));
+
+    arrayAnterior.push(product);
+    localStorage.setItem("cart", JSON.stringify(arrayAnterior));
+  }
+}
