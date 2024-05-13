@@ -21,7 +21,7 @@ function printDetails(id) {
             src="${product.photos[2]}"
             alt="${product.title}"
           />
-        </section>
+        </section>  
         <div class="product-description-block">
           <h1 class="product-title">${product.title}</h1>
           <form class="product-selector">
@@ -109,7 +109,7 @@ function saveProduct(id) {
   const product = {
     id: id,
     title: found.title,
-    price: document.getElementById("price").innerHTML,
+    price: document.getElementById("quantity").value * found.price,
     photos: document.querySelector("#big-img").src,
     color: document.querySelector("#color").value,
     quantity: document.querySelector("#quantity").value,
@@ -121,7 +121,6 @@ function saveProduct(id) {
     localStorage.setItem("cart", JSON.stringify(array));
   } else {
     let arrayAnterior = JSON.parse(localStorage.getItem("cart"));
-
     arrayAnterior.push(product);
     localStorage.setItem("cart", JSON.stringify(arrayAnterior));
   }
